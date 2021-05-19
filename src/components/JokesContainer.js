@@ -11,7 +11,7 @@ const JokesContainer = ({ jokeData, removeJoke }) => {
         {jokeData.map((joke, index) => {
           return (
             <li className="joke" key={joke.key}>
-              <p>Title: {joke.name}</p>
+              <p>• {joke.name}</p>
               <button
                 className="button remove"
                 onClick={() => {

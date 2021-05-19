@@ -2,6 +2,8 @@
 /* Importing our google font */
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
 html {
     font-size: 125%;
 }
@@ -49,21 +51,27 @@ label {
 .button {
     border: none;
     padding: 10px 20px;
+    margin-left: 20px;
     border-radius: 5px;
     font-weight: 600;
+    font-size: 1rem;
+    
 }
 .button.remove {
     color: white;
-    background: coral;
+    background: rgb(201, 26, 26);
+    /* font-size: 1rem; */
+    
 }
 .button.submit {
     color: white;
     background: darkblue;
+    /* font-size: 3rem; */
 }
 /* Input Form Classes */
 .inputFormContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 100%;
     margin: 10px 20px;

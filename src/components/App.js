@@ -65,11 +65,12 @@ const App = () => {
       <h1>The Joke Book</h1>
       {/* create an input area to add a joke */}
       <form action="submit" className="inputFormContainer">
-        <label htmlFor="input">Jot down your joke</label>
+        <label htmlFor="input" className="sr-only">Jot down your joke</label>
         <input
           value={userInput}
           id="input"
           type="text"
+          placeholder="Jot down your joke"
           onChange={handleUserInput}
         />
         <button className="button submit" onClick={handleSubmitClick}>
