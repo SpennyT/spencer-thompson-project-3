@@ -7,15 +7,15 @@ import firebase from "../config/firebase.js";
 // Importing our JokesContainer Component
 import JokesContainer from "./JokesContainer";
 // Importing rating code from material UI
-// import SimpleRating from "./RatingSystem.js";
+import SimpleRating from "./RatingSystem.js";
 
+const dbRef = firebase.database().ref();
 
 const App = () => {
   // Declaring state variables to hold jokes and user input
   const [jokes, setJokes] = useState([]);
   const [userInput, setUserInput] = useState("");
   // Connect to firebase
-  const dbRef = firebase.database().ref();
 
   useEffect(() => {
 
@@ -55,7 +55,7 @@ const App = () => {
       console.log("empty string")
     }
   };
-  // This function will remove from our list of jokes
+  // Function to remove joke (remove instead of push)
   const handleRemoveJoke = (joke) => {
     dbRef.child(joke).remove();
   };
@@ -78,7 +78,7 @@ const App = () => {
         </button>
       </form>
     <JokesContainer jokeData={jokes} removeJoke={handleRemoveJoke} />
-    {/* <SimpleRating /> */}
+    <SimpleRating />
     </div>
   
   );
