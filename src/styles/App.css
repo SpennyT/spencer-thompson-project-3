@@ -1,0 +1,88 @@
+/* Base Code */
+/* Importing our google font */
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+html {
+    font-size: 125%;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    margin-top: 150px;
+    font-family: 'Kalam', cursive;
+    font-size: 6rem;
+    color: white;
+}
+
+label {
+    color: white;
+    font-size: 2rem;
+}
+/* Books Classes */
+.jokesContainer {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+}
+.joke {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(138, 138, 138);
+    box-shadow: 5px 5px 18px 0 rgba(138, 138, 138, 0.75);
+    background: white;
+}
+/* Button Classes */
+.joke button {
+    align-items: flex-end;
+}
+.button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.button.remove {
+    color: white;
+    background: coral;
+}
+.button.submit {
+    color: white;
+    background: darkblue;
+}
+/* Input Form Classes */
+.inputFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 10px 20px;
+}
+.inputFormContainer label {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.inputFormContainer input {
+    border: 1px solid rgb(138, 138, 138);
+    margin: 10px 0;
+    width: calc(100% - 40px);
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+body {
+background : url(../assets/comedyBackground.jpeg);
+}
