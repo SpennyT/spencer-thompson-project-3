@@ -10,7 +10,7 @@ html {
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 75%;
+    max-width: 85%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -22,6 +22,11 @@ h1 {
     color: white;
 }
 
+p {
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+}
+
 label {
     color: white;
     font-size: 2rem;
@@ -31,19 +36,30 @@ label {
     display: flex;
     padding: 0;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 .joke {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     margin: 10px 0;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid rgb(138, 138, 138);
-    box-shadow: 5px 5px 18px 0 rgba(138, 138, 138, 0.75);
-    background: white;
+    background-image: url(../assets/notepadfaded.jpg);
 }
+
+.jokeAndRating {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    margin-top: 30px;
+}
+
 /* Button Classes */
 .joke button {
     align-items: flex-end;
@@ -60,7 +76,7 @@ label {
 .button.remove {
     color: white;
     background: rgb(201, 26, 26);
-    /* font-size: 1rem; */
+    /* height: 70%; */
     
 }
 .button.submit {

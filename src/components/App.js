@@ -1,4 +1,4 @@
-// Importing our useEffect Hook
+// Importing our useEffect and useState Hook
 import { useEffect, useState } from "react";
 // Importing our styles
 import "../styles/App.css";
@@ -6,8 +6,6 @@ import "../styles/App.css";
 import firebase from "../config/firebase.js";
 // Importing our JokesContainer Component
 import JokesContainer from "./JokesContainer";
-// Importing rating code from material UI
-import SimpleRating from "./RatingSystem.js";
 
 const dbRef = firebase.database().ref();
 
@@ -15,7 +13,7 @@ const App = () => {
   // Declaring state variables to hold jokes and user input
   const [jokes, setJokes] = useState([]);
   const [userInput, setUserInput] = useState("");
-  // Connect to firebase
+ 
 
   useEffect(() => {
 
@@ -24,9 +22,9 @@ const App = () => {
       const newDataArray = [];
       const data = response.val();
     
-      // 
+      
       for (let key in data) {
-        let jokeObj = { key: key, name: data[key] };
+        let jokeObj = { key: key, name: data[key]};
         newDataArray.push(jokeObj);
       }
       // Use setJokes state function to put in newDataArray as jokes
@@ -51,9 +49,7 @@ const App = () => {
     dbRef.push(userInput);
     setUserInput("");
     } 
-    else {
-      console.log("empty string")
-    }
+    
   };
   // Function to remove joke (remove instead of push)
   const handleRemoveJoke = (joke) => {
@@ -78,7 +74,7 @@ const App = () => {
         </button>
       </form>
     <JokesContainer jokeData={jokes} removeJoke={handleRemoveJoke} />
-    <SimpleRating />
+    
     </div>
   
   );

@@ -1,25 +1,26 @@
 import { Fragment } from "react";
+import CustomizedRatings from './RatingSystem.js';
 const JokesContainer = ({ jokeData, removeJoke }) => {
+
   return (
     <Fragment>
-      {/* create a UL element to hold our list items */}
+      {/* HTML for jokes to appear on the page */}
       <ul className="jokesContainer">
-        {/* 
-        // create a list item components
-        // create a joke component
-        */}
-        {jokeData.map((joke, index) => {
+       
+        {jokeData.map((joke) => {
           return (
             <li className="joke" key={joke.key}>
-              <p>• {joke.name}</p>
+              <div className="jokeAndRating">
+                <p>{joke.name}</p>
+                <CustomizedRatings />
+              </div>
               <button
                 className="button remove"
                 onClick={() => {
-                  // adding in functionality to remove an item
                   removeJoke(joke.key);
                 }}
               >
-                Remove Joke
+                Delete
               </button>
             </li>
           );
